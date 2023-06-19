@@ -1,0 +1,13 @@
+node_modules/
+
+# Ignore files with a .env extension
+*.env
+
+# Ignore log files
+*.log
+
+# Ignore build output
+build/
+
+# Ignore dependency lock files
+yarn.lock
