@@ -32,7 +32,7 @@ const NewsLetter = () => {
             </Box> */}
             {/* Subscription Letter */}
             <Box sx={{ zIndex: "99999", textAlign: 'center' }}>
-                <h2 style={{ color: "#5d5dff", fontFamily: "Anton,sans-serif", marginTop: "10px", fontSize: '40px' }}>
+                <h2 style={{ color: "rgb(255 153 0)", fontFamily: "Anton,sans-serif", marginTop: "10px", fontSize: '40px' }}>
                     Sign Up For News Letter
                 </h2>
                 <div style={{
@@ -57,7 +57,7 @@ const NewsLetter = () => {
                             boxShadow: '  rgba(0, 0, 0, 0.05) 0px 0px 0px 1px'
 
                         }} />
-                    <Button style={{ color: "#5d5dff", border: 'none', padding: "5px", borderRadius: '20px', fontWeight: "600", display: 'flex', gap: "5px" }}>
+                    <Button style={{ color: "rgb(255 153 0)", border: 'none', padding: "5px", borderRadius: '20px', fontWeight: "600", display: 'flex', gap: "5px" }}>
                         Subscribe <SendIcon />
                     </Button>
                 </Box>

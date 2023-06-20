@@ -17,6 +17,7 @@ import GetInTouch from "../../Components/GetInTouch/GetInTouch";
 import NewsLetter from "../../Components/NewsLetter/NewsLetter";
 import Marquee from "../../Components/Marquee/Marquee";
 import Slider from '../../Components/Slider/Slider'
+import Trusted from "../../Components/Trusted/Trusted";
 
 function Home() {
   const animationRef = useRef(null);
@@ -123,10 +124,12 @@ function Home() {
           sx={{ width: "70%", borderRadius: "20px", mb: "30px" }}
         />
       </Box>
-
-      <div style={{ height: "60vh", width: '100%', margin: "10px 0px", boxSizing: "border-box" }}>
+      {/* Slider */}
+      <div style={{ width: '100%', margin: "10px 0px", boxSizing: "border-box" }}>
         <Slider />
       </div>
+
+      <Divider sx={{ background: "#ffffff21" }} />
 
       {/* Features */}
       <Box
@@ -149,8 +152,7 @@ function Home() {
           Features
         </Typography>
         <Typography variant="h6" fontWeight={"500"} mb="40px" color="#9ba9b4">
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.{" "}
+          Experience the Power of Innovation: Our Cutting-Edge Features and Services
         </Typography>
 
         <Grid container spacing={4}>
@@ -415,6 +417,9 @@ function Home() {
       </Box>
 
       <Divider sx={{ background: "#ffffff21" }} />
+
+
+
       {/* Tech Stack */}
       <Box>
         <Box style={{
@@ -441,31 +446,48 @@ function Home() {
             Tech Stack
           </Box>
           <Typography variant="h3" fontWeight={"600"}>
-            One Platform, unlimited solution
-          </Typography>{" "}
+            Europe's Leading IT company.
+          </Typography>
+          <Typography variant="h7" fontWeight={"500"} sx={{ color: Colors.SubheadingColor }}>
+            Empowering Your Digital Journey: Web, App & Custom Software Solutions by DeebaEmpire
+          </Typography>
         </Box>
         <Box
           sx={{ display: "flex", justifyContent: "center", margin: "30px 0px" }}
         >
           <Box
             sx={{
-              width: "700px",
+              width: "100%",
               borderRadius: "20px",
+              display: "flex",
+              justifyContent: 'center',
+              gap: "40px",
+              padding: "0px 40px",
+              alignItems: "center"
             }}
           >
             <CardMedia
               component={"img"}
               image={
-                "https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzV8fHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+                "https://media.istockphoto.com/id/1384513137/photo/global-communication.webp?b=1&s=170667a&w=0&k=20&c=drg9zDUfpcopPsJ-UJz5NBysaUqNP-nfHUAXqDwv1go="
               }
               sx={{
                 objectFit: "contain",
-                width: "100%",
-                // height: "100%",
+                width: "400px",
                 boxShadow:
                   "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
               }}
             />
+
+            <Box sx={{ width: '40%', textAlign: "center", color: "gray" }}>
+              <p>
+                Embrace the digital revolution with DeebaEmpire's comprehensive range of services.
+                Our expertise in mobile development, app innovation,
+                and custom software solutions empowers businesses to thrive in the digital landscape.
+                From captivating mobile apps to tailored software solutions,
+                we bring your ideas to life, ensuring seamless user experiences and enhanced productivity.
+              </p>
+            </Box>
           </Box>
         </Box>
         {/* Cool MarQueee---> */}
@@ -473,9 +495,12 @@ function Home() {
         <Box>
           <Marquee />
         </Box>
-      </Box>
+      </Box >
 
       <Divider sx={{ background: "#ffffff21" }} />
+
+      {/* Trusted By Section */}
+      <Trusted />
 
       {/* Pricing */}
       <Box id="pricing"
@@ -485,6 +510,52 @@ function Home() {
       </Box>
       {/* News Letter */}
       <NewsLetter />
+
+      {/* Tech Stack */}
+      <Box>
+        <Box style={{
+          margin: "50px 0px",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+          padding: "0px 40px",
+          boxSizing: "border-box",
+          gap: "30px",
+          overflow: "hidden",
+        }}>
+          <Box
+            borderRadius={"10px"}
+            sx={{
+              background: "#caff0036",
+              padding: "10px 30px",
+              color: '#caff00',
+              fontWeight: "600",
+            }}
+          >
+            Our Pride
+          </Box>
+          <Typography variant="h3" fontWeight={"600"}>
+            Our Client's
+          </Typography>
+          <Typography variant="h7" fontWeight={"500"} sx={{ color: Colors.SubheadingColor }}>
+            Empowering Your Digital Journey: Web, App & Custom Software Solutions by DeebaEmpire
+          </Typography>
+        </Box>
+        <Box
+          sx={{ display: "flex", justifyContent: "center", margin: "30px 0px" }}
+        >
+
+        </Box>
+        {/* Cool MarQueee---> */}
+
+        <Box>
+          <Marquee />
+        </Box>
+      </Box >
+
+
       <Divider sx={{ background: "#ffffff21" }} />
       {/* Get in Touch Section */}
       <GetInTouch />

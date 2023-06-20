@@ -151,5 +151,10 @@ body {
 }
 
 .swiper-slide {
-  margin: 0px 10px !important;
+  /* margin: 0px 10px !important; */
+}
+
+.quotation-btn {
+  background-color: transparent !important;
+  background-image: linear-gradient(270deg, #ef6531, #9f297c) !important;
 }
