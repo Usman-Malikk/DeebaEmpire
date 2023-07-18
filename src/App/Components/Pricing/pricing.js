@@ -22,7 +22,7 @@ function Pricing() {
 
       {/* Pricing Section */}
       <Grid container spacing={2} display='flex' justifyContent={'center'} gap='10px'>
-        <Grid item xs={3} sx={{ borderRadius:"10px",border: "1px solid #ffffff21",boxShadow:" rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
+        <Grid item xs={12} md={3} sx={{ borderRadius: "10px", border: "1px solid #ffffff21", boxShadow: " rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
           <Box sx={{ padding: "20px" }}>
             <Typography variant="h5" mb="25px" fontWeight={"700"} color='rgb(93 93 255 )'>
               Free
@@ -68,7 +68,7 @@ function Pricing() {
             </ul>
           </Box>
         </Grid>
-        <Grid item xs={3} mt='-50px' sx={{ height:"fit-content",borderRadius:"10px",border: "1px solid #ffffff21",boxShadow:" rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
+        <Grid item xs={12} md={3} mt={{ xs: "0px", md: "-50px" }} sx={{ height: "fit-content", borderRadius: "10px", border: "1px solid #ffffff21", boxShadow: " rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
           <Box sx={{ padding: "20px" }}>
             <Typography variant="h5" mb="25px" fontWeight={"700"} color='rgb(93 93 255 )'>
               Most Recomended Package
@@ -114,7 +114,7 @@ function Pricing() {
             </ul>
           </Box>
         </Grid>
-        <Grid item xs={3} sx={{ borderRadius:"10px",border: "1px solid #ffffff21",boxShadow:" rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
+        <Grid item xs={12} md={3} sx={{ borderRadius: "10px", border: "1px solid #ffffff21", boxShadow: " rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px" }}>
           <Box sx={{ padding: "20px" }}>
             <Typography variant="h5" mb="25px" fontWeight={"700"} color='rgb(93 93 255 )'>
               Silver Package

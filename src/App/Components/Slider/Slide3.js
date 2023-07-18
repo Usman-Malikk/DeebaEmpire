@@ -4,7 +4,7 @@ import { Images } from '../../Assets/Images'
 import { Colors } from '../../Assets/colors'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const Slide3 = () => {
+const Slide2 = () => {
     return (
         <Box style={{
             position: "relative",
@@ -19,9 +19,9 @@ const Slide3 = () => {
             <CardMedia component={'img'} image={Images.LLCSlideBg2} style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: '100%' }} />
 
             <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", }}>
-                <Box sx={{ height: "100%", display: "flex", flexDirection: "column", gap: '10px', width: "40%" }}>
+                <Box sx={{ height: "100%", display: "flex", flexDirection: "column", gap: '10px', width: { xs: "100%", md: "40%" } }}>
                     <Typography variant='h4' sx={{ fontWeight: "700", textAlign: "start" }}>
-                        <span style={{ color: Colors.SubheadingColor }}>Incorporate</span>in USA instantly from anywhere
+                        <span style={{ color: Colors.SubheadingColor }}>   Incorporate </span>in USA instantly from anywhere
                     </Typography>
                     <p style={{ fontSize: "14px", textAlign: "start" }}>
                         Launch your USA-based company to get a bank account and start transacting immediately. No paperwork, tax, or legal headaches.
@@ -63,11 +63,17 @@ const Slide3 = () => {
                     </Button>
                     <p style={{ color: Colors.SubheadingColor, textAlign: 'start' }}>100% Money Back Gurantee</p>
                 </Box>
-                <CardMedia component={'img'} image={Images.LLcSlide1} sx={{ objectFit: "contain", width: "50%", zIndex: "999" }} />
+                <CardMedia component={'img'} image={Images.LLcSlide1} sx={{
+                    objectFit: "contain", width: "50%", zIndex: "999", display: {
+                        xs: 'none',
+                        md: "block"
+                    }
+                }} />
+
             </Box>
 
         </Box>
     )
 }
 
-export default Slide3
+export default Slide2

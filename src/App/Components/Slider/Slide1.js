@@ -4,7 +4,7 @@ import { Images } from '../../Assets/Images'
 import { Colors } from '../../Assets/colors'
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
-const Slide1 = () => {
+const Slide2 = () => {
     return (
         <Box style={{
             position: "relative",
@@ -19,7 +19,7 @@ const Slide1 = () => {
             <CardMedia component={'img'} image={Images.LLCSlideBG} style={{ position: "absolute", top: "0px", left: "0px", width: "100%", height: '100%' }} />
 
             <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%", }}>
-                <Box sx={{ height: "100%", display: "flex", flexDirection: "column", gap: '10px', width: "40%" }}>
+                <Box sx={{ height: "100%", display: "flex", flexDirection: "column", gap: '10px', width: { xs: "100%", md: "40%" } }}>
                     <Typography variant='h4' sx={{ fontWeight: "700", textAlign: "start" }}>
                         <span style={{ color: Colors.SubheadingColor }}>   Incorporate </span>in USA instantly from anywhere
                     </Typography>
@@ -61,13 +61,19 @@ const Slide1 = () => {
                     <Button className='quotation-btn' sx={{ width: "fit-content", background: "orange", fontSize: "12px", color: "white", fontWeight: "500", mt: "20px" }}>
                         Get Quotation Now
                     </Button>
-                    <p style={{ color: Colors.SubheadingColor,textAlign:'start' }}>100% Money Back Gurantee</p>
+                    <p style={{ color: Colors.SubheadingColor, textAlign: 'start' }}>100% Money Back Gurantee</p>
                 </Box>
-                <CardMedia component={'img'} image={Images.LLcSlide1} sx={{ objectFit: "contain", width: "50%", zIndex: "999" }} />
+                <CardMedia component={'img'} image={Images.LLcSlide1} sx={{
+                    objectFit: "contain", width: "50%", zIndex: "999", display: {
+                        xs: 'none',
+                        md: "block"
+                    }
+                }} />
+
             </Box>
 
         </Box>
     )
 }
 
-export default Slide1
+export default Slide2

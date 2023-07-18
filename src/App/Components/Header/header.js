@@ -11,6 +11,8 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
+import { CardMedia } from "@mui/material";
+import { Images } from "../../Assets/Images";
 
 export default function Header() {
   const [state, setState] = React.useState({
@@ -38,7 +40,7 @@ export default function Header() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      {/* <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -62,7 +64,7 @@ export default function Header() {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </Box>
   );
 
@@ -76,7 +78,7 @@ export default function Header() {
       }}
     >
       <Box>
-        <h1>Logo</h1>
+        <CardMedia component={'img'} image={Images.Logo} />
       </Box>
 
       <Box>
@@ -101,9 +103,8 @@ export default function Header() {
         </Box>
 
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: "20px" }}>
-          <Button sx={{ color: "rgb(93 93 255 )" }}>Sign in</Button>
-          <Button sx={{ background: "rgb(93 93 255 )", color: "white" }}>
-            Sign Up
+          <Button href='#getInTouch' sx={{ background: "rgb(93 93 255 )", color: "white", padding: "10px", fontWeight: "600" }}>
+            Contact us
           </Button>
         </Box>
       </Box>

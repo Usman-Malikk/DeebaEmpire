@@ -76,8 +76,9 @@ function Home() {
           variant="h2"
           fontWeight={"900"}
           className="tracking-in-expand"
+          sx={{ textAlign: "center" }}
         >
-          Deeba Empire
+          Deeba Empires
         </Typography>
 
 
@@ -97,6 +98,7 @@ function Home() {
           }}
         >
           <Button
+            href='#pricing'
             sx={{
               color: "rgb(93 93 255 )",
               background: "white",
@@ -107,6 +109,7 @@ function Home() {
             Pricing
           </Button>
           <Button
+            href='#getInTouch'
             sx={{
               background: "rgb(93 93 255 )",
               color: "white",
@@ -156,22 +159,22 @@ function Home() {
         </Typography>
 
         <Grid container spacing={4}>
-          <Grid item xs="4">
+          <Grid item xs="12" md='4'>
             <SampleCard />
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs="12" md='4' >
             <SampleCard />
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs="12" md='4' >
             <SampleCard />
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs="12" md='4' >
             <SampleCard />
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs="12" md='4' >
             <SampleCard />
           </Grid>
-          <Grid item xs="4">
+          <Grid item xs="12" md='4' >
             <SampleCard />
           </Grid>
         </Grid>
@@ -213,7 +216,7 @@ function Home() {
           officia deserunt mollit anim id est laborum.{" "}
         </Typography>
         <Grid container spacing={10}>
-          <Grid item xs="6">
+          <Grid item xs="12" md='6'>
             <Box
               sx={{
                 display: "flex",
@@ -268,9 +271,7 @@ function Home() {
               </Typography>
             </Box>
           </Grid>
-          <Grid
-            item
-            xs="6"
+          <Grid item xs="12" md='6'
             id="ImageSlide"
             ref={animationRef}
             className={`animation ${isIntersecting ? "slide-in-right " : ""}`}
@@ -283,7 +284,7 @@ function Home() {
               }
             />
           </Grid>
-          <Grid item xs="6">
+          <Grid item xs="12" md='6'>
             <CardMedia
               component={"img"}
               image={
@@ -291,7 +292,7 @@ function Home() {
               }
             />
           </Grid>
-          <Grid item xs="6">
+          <Grid item xs="12" md='6'>
             <Box
               sx={{
                 display: "flex",
@@ -347,7 +348,7 @@ function Home() {
             </Box>
           </Grid>
 
-          <Grid item xs="6">
+          <Grid item xs="12" md='6'>
             <Box
               sx={{
                 display: "flex",
@@ -402,7 +403,7 @@ function Home() {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs="6" ref={leftSlide}
+          <Grid item xs="12" md='6' ref={leftSlide}
             id="leftAslideAnimation"
 
             className={`animation ${leftAslideAnimation ? "slide-in-right " : ""}`}>
@@ -476,10 +477,14 @@ function Home() {
                 width: "400px",
                 boxShadow:
                   "rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px",
+                display: {
+                  xs: "none",
+                  md: "block"
+                }
               }}
             />
 
-            <Box sx={{ width: '40%', textAlign: "center", color: "gray" }}>
+            <Box sx={{ width: { xs: "100%", md: "40%" }, textAlign: "center", color: "gray" }}>
               <p>
                 Embrace the digital revolution with DeebaEmpire's comprehensive range of services.
                 Our expertise in mobile development, app innovation,
@@ -488,6 +493,8 @@ function Home() {
                 we bring your ideas to life, ensuring seamless user experiences and enhanced productivity.
               </p>
             </Box>
+
+
           </Box>
         </Box>
         {/* Cool MarQueee---> */}
@@ -558,7 +565,9 @@ function Home() {
 
       <Divider sx={{ background: "#ffffff21" }} />
       {/* Get in Touch Section */}
-      <GetInTouch />
+      <div id='getInTouch'>
+        <GetInTouch />
+      </div>
     </>
   );
 }

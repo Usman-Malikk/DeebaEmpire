@@ -17,22 +17,22 @@ const Trusted = () => {
             <Box sx={{ display: 'flex', justifyContent: "center", alignItems: 'center', gap: "20px" }}>
                 <CardMedia component={'img'}
                     image={Images.AwsLogo}
-                    sx={{ width: "100px", borderRadius: "20px", mb: "30px" }} />
+                    sx={{ width: { xs: "40px", md: '100px' }, borderRadius: "20px", mb: "30px" }} />
                 <CardMedia component={'img'}
                     image={Images.MicrosoftPartner}
-                    sx={{ width: "100px", borderRadius: "20px", mb: "30px" }} />
+                    sx={{ width: { xs: "40px", md: '100px' }, borderRadius: "20px", mb: "30px" }} />
                 <CardMedia component={'img'}
                     image={Images.GoogleRating}
-                    sx={{ width: "100px", borderRadius: "20px", mb: "30px" }} />
+                    sx={{ width: { xs: "40px", md: '100px' }, borderRadius: "20px", mb: "30px" }} />
                 <CardMedia component={'img'}
                     image={Images.GoodFirms}
-                    sx={{ width: "100px", borderRadius: "20px", mb: "30px" }} />
+                    sx={{ width: { xs: "40px", md: '100px' }, borderRadius: "20px", mb: "30px" }} />
                 <CardMedia component={'img'}
                     image={Images.AppFutura}
-                    sx={{ width: "100px", borderRadius: "20px", mb: "30px" }} />
+                    sx={{ width: { xs: "40px", md: '100px' }, borderRadius: "20px", mb: "30px" }} />
                 <CardMedia component={'img'}
                     image={Images.DigitalBestLogo}
-                    sx={{ width: "100px", borderRadius: "20px", mb: "30px" }} />
+                    sx={{ width: { xs: "40px", md: '100px' }, borderRadius: "20px", mb: "30px" }} />
             </Box>
 
         </Box>

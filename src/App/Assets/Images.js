@@ -17,10 +17,12 @@ import AppFutura from './Images/AppFuture.png'
 import DigitalBestLogo from './Images/DigitalBestlLogo.png'
 import LLCSlideBG from './Images/LLCImagebg1.svg'
 import LLcSlide1 from './Images/LLCImage1.svg'
-import LLCSlideBg2 from './Images/LLCImagebg2.svg'
+import LLCSlideBg2 from './Images/LLCImagebg2.svg';
+import Logo from './Images/DEEBA-LOGO.png'
 
 
 export const Images = {
+  Logo: Logo,
   Hero: Hero,
   NewsLetterBg: NewsLetter,
   Laravel: Laravel,
