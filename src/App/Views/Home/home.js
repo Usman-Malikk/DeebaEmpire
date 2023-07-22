@@ -18,6 +18,7 @@ import NewsLetter from "../../Components/NewsLetter/NewsLetter";
 import Marquee from "../../Components/Marquee/Marquee";
 import Slider from '../../Components/Slider/Slider'
 import Trusted from "../../Components/Trusted/Trusted";
+import Footer from "../../Components/Footer/footer";
 
 function Home() {
   const animationRef = useRef(null);
@@ -56,7 +57,7 @@ function Home() {
   }, [URL]);
 
   return (
-    <>
+    < >
       <Header />
       {/* Banner Details */}
       <Box
@@ -64,6 +65,7 @@ function Home() {
         sx={{
           mt: "50px",
           width: "100%",
+
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -179,9 +181,7 @@ function Home() {
           </Grid>
         </Grid>
       </Box>
-
       <Divider sx={{ background: "#ffffff21" }} />
-
       {/* Features Detailed Explanation */}
       <Box
         sx={{
@@ -518,7 +518,6 @@ function Home() {
       {/* News Letter */}
       <NewsLetter />
 
-      {/* Tech Stack */}
       <Box>
         <Box style={{
           margin: "50px 0px",
@@ -568,6 +567,11 @@ function Home() {
       <div id='getInTouch'>
         <GetInTouch />
       </div>
+
+      <Divider sx={{ background: "#ffffff21" }} />
+
+
+      <Footer />
     </>
   );
 }
