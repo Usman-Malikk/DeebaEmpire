@@ -13,14 +13,16 @@ const theme = createTheme({
     secondary: {
       main: 'rgb(93 93 255 )'
     },
-}})
-;
+  }
+})
+  ;
 
 root.render(
   <ThemeProvider theme={theme}>
     <Box
       sx={{
         width: "100%",
+        // overflow: "hidden",
         display: "flex",
         justifyContent: "center",
         background: "#151719",

@@ -13,14 +13,21 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import { CardMedia } from "@mui/material";
 import { Images } from "../../Assets/Images";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import HomeIcon from '@mui/icons-material/Home';
+import HelpCenterIcon from '@mui/icons-material/HelpCenter';
+
 
 export default function Header() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     top: false,
     left: false,
     bottom: false,
     right: false,
   });
+  const navigate = useNavigate()
+
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -40,31 +47,30 @@ export default function Header() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      {/* <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+      <List>
+        {[
+          {
+            name: "Home",
+            path: "/",
+            icon: <HomeIcon sx={{ color: "white" }} />
+          }, {
+            name: "Faqs",
+            path: "/faqs",
+            icon: <HelpCenterIcon sx={{ color: "white" }} />
+          },
+
+        ].map((text, index) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton sx={{ color: "white" }} onClick={() => { navigate(text.path) }}>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                {text.icon}
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text.name} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
+
     </Box>
   );
 
@@ -92,6 +98,11 @@ export default function Header() {
                 {<MenuIcon />}
               </Button>
               <Drawer
+                sx={{
+                  '.css-4t3x6l-MuiPaper-root-MuiDrawer-paper': {
+                    background: "#151719"
+                  }
+                }}
                 anchor={anchor}
                 open={state[anchor]}
                 onClose={toggleDrawer(anchor, false)}
@@ -103,6 +114,16 @@ export default function Header() {
         </Box>
 
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: "20px" }}>
+          <p onClick={() => { navigate('/') }} style={{ color: "white", padding: "10px", cursor: "pointer" }}>
+            Home
+          </p>
+          <p href='#getInTouch' style={{ color: "white", padding: "10px", }}>
+            Testimonial
+          </p>
+          <p onClick={() => { navigate('/faqs') }} style={{ color: "white", padding: "10px", cursor: "pointer" }}>
+            Faq's
+          </p>
+
           <Button href='#getInTouch' sx={{ background: "rgb(93 93 255 )", color: "white", padding: "10px", fontWeight: "600" }}>
             Contact us
           </Button>

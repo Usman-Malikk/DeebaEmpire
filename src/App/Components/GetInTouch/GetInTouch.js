@@ -10,7 +10,7 @@ function GetInTouch() {
             justifyContent="center"
             flexDirection="column"
             alignItems={"center"}
-            sx={{ margin: "50px 0px", gap: "30px" }}
+            sx={{ margin: "50px 0px", gap: "30px", width: "100%" }}
         >
             <Typography variant="h3" fontWeight={"600"}>
                 Get in Touch
